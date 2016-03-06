@@ -8,7 +8,19 @@
   <div class="container">
 
     <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/auth">Auth</a></li>
+        <li><a href="/cookies">Cookies</a></li>
+        <li><a href="/encryption">Encryption</a></li>
+        <li><a href="/sessions">Sessions</a></li>
+      </ul>
+    </nav>
+
+    <hr>
+
+    <p>Result: <strong>{{ result || "No result key returned." }}</strong></p>
 
   </div>
 

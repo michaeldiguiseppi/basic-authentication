@@ -10,6 +10,10 @@ var swig = require('swig');
 
 // *** routes *** //
 var routes = require('./routes/index.js');
+var authRoutes = require('./routes/auth.js');
+var cookieRoutes = require('./routes/cookies.js');
+var encryptionRoutes = require('./routes/encryption.js');
+var sessionRoutes = require('./routes/sessions.js');
 
 
 // *** express instance *** //
@@ -36,6 +40,10 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 // *** main routes *** //
 app.use('/', routes);
+app.use('/auth', authRoutes);
+app.use('/cookies', cookieRoutes);
+app.use('/encryption', encryptionRoutes);
+app.use('/sessions', sessionRoutes);
 
 
 // catch 404 and forward to error handler
